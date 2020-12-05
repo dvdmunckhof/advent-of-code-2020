@@ -2,6 +2,10 @@ import java.io.Reader
 
 object Resources {
 
+    fun readString(fileName: String): String {
+        return resourceReader(fileName).readText()
+    }
+
     fun readAsList(fileName: String): List<String> {
         return resourceReader(fileName).readLines()
     }

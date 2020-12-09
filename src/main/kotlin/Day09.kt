@@ -1,20 +1,19 @@
 class Day09(private val input: List<Long>) {
 
     fun solvePart1(preambleSize: Int): Long {
-        val buffer = input.take(preambleSize).toMutableList()
+        return input.windowed(preambleSize + 1).first {
+            val number = it.last()
+            val buffer = it.dropLast(0)
 
-        return input.drop(preambleSize).first { number ->
             for ((i, a) in buffer.withIndex()) {
                 for (b in buffer.listIterator(i + 1)) {
                     if (a + b == number && a != b) {
-                        buffer.removeFirst()
-                        buffer.add(number)
                         return@first false
                     }
                 }
             }
             true
-        }
+        }.last()
     }
 
     fun solvePart2(target: Long): Long {

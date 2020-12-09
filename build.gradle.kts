@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "com.dvdmunckhof"
-version = "2020.12.8"
+version = "2020.12.9"
 
 repositories {
     mavenCentral()
@@ -22,6 +22,6 @@ tasks.test {
     useJUnitPlatform()
 }
 
-tasks.withType<KotlinCompile>() {
+tasks.withType<KotlinCompile> {
     kotlinOptions.jvmTarget = "11"
 }

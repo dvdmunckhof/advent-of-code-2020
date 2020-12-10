@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "com.dvdmunckhof"
-version = "2020.12.9"
+version = "2020.12.10"
 
 repositories {
     mavenCentral()

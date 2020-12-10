@@ -10,6 +10,14 @@ object Resources {
         return resourceReader(fileName).readLines()
     }
 
+    fun readAsIntList(filename: String): List<Int> {
+        return readAsList(filename).map(String::toInt)
+    }
+
+    fun readAsLongList(filename: String): List<Long> {
+        return readAsList(filename).map(String::toLong)
+    }
+
     private fun resourceReader(fileName: String): Reader {
         return javaClass.classLoader.getResourceAsStream(fileName)?.reader()
             ?: throw IllegalArgumentException("Cannot find Resource: $fileName")

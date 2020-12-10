@@ -7,7 +7,7 @@ class Day10Test {
 
     @Test
     fun `Part 1 - Example`() {
-        val input = Resources.readAsList("day10_example_input.txt").map(String::toInt)
+        val input = Resources.readAsIntList("day10_example_input.txt")
         val answer = Day10(input).solvePart1()
 
         Assertions.assertEquals(220, answer)
@@ -15,7 +15,7 @@ class Day10Test {
 
     @Test
     fun `Part 1 - Actual`() {
-        val input = Resources.readAsList("day10_actual_input.txt").map(String::toInt)
+        val input = Resources.readAsIntList("day10_actual_input.txt")
         val answer = Day10(input).solvePart1()
 
         Assertions.assertEquals(2516, answer)
@@ -23,7 +23,7 @@ class Day10Test {
 
     @Test
     fun `Part 2 - Example`() {
-        val input = Resources.readAsList("day10_example_input.txt").map(String::toInt)
+        val input = Resources.readAsIntList("day10_example_input.txt")
         val answer = Day10(input).solvePart2()
 
         Assertions.assertEquals(19208L, answer)
@@ -31,7 +31,7 @@ class Day10Test {
 
     @Test
     fun `Part 2 - Actual`() {
-        val input = Resources.readAsList("day10_actual_input.txt").map(String::toInt)
+        val input = Resources.readAsIntList("day10_actual_input.txt")
         val answer = Day10(input).solvePart2()
 
         Assertions.assertEquals(296196766695424L, answer)

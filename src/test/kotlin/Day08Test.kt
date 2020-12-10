@@ -34,6 +34,6 @@ class Day08Test {
         val input = Resources.readAsList("day08_actual_input.txt")
         val answer = Day08(input).solvePart2()
 
-        Assertions.assertEquals(8015, answer)
+        Assertions.assertEquals(1016, answer)
     }
 }

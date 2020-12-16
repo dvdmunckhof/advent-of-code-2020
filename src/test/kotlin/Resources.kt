@@ -3,7 +3,7 @@ import java.io.Reader
 object Resources {
 
     fun readString(fileName: String): String {
-        return resourceReader(fileName).readText()
+        return resourceReader(fileName).readText().trimEnd()
     }
 
     fun readAsList(fileName: String): List<String> {

@@ -1,4 +1,4 @@
-class Day04(private val input: String) {
+class Day04(input: String) {
 
     private val fieldNames = listOf("byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid")
     private val entries = input.split("\n\n").map(this::splitEntry)
@@ -25,7 +25,7 @@ class Day04(private val input: String) {
     }
 
     private fun splitEntry(entry: String): Map<String, String> {
-        return entry.split(' ', '\n').filter(String::isNotEmpty).associate {
+        return entry.split(' ', '\n').associate {
             val colonIndex = it.indexOf(':')
             it.substring(0, colonIndex) to it.substring(colonIndex + 1)
         }

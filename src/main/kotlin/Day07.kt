@@ -36,7 +36,7 @@ class Day07(private val input: List<String>) {
     }
 
     private fun parseRule(rule: String): BagRule {
-        val (name, content) = rule.split(" bags contain ")
+        val (name, content) = rule.splitOnce(" bags contain ")
 
         val children = Pattern.compile("(\\d+) (\\w+ \\w+) bag")
             .matcher(content).results().asSequence()

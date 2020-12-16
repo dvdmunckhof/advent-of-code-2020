@@ -40,9 +40,9 @@ class Day14(private val input: List<String>) {
                 floatingBits = mask.reversed().withIndex().filter { it.value == 'X' }.map { it.index }
             } else {
                 // parse: "mem[xxx] = xxxxxxxx"
-                val parts = line.substring(4).split("] = ")
-                val index = parts[0].toLong()
-                val value = parts[1].toLong()
+                val parts = line.substring(4).splitOnce("] = ")
+                val index = parts.first.toLong()
+                val value = parts.second.toLong()
                 callback(index, value, maskZeroes, maskOnes, floatingBits)
             }
         }

@@ -1,7 +1,7 @@
 class Day08(input: List<String>) {
 
     private val program: List<Pair<String, Int>?> = input.map { line ->
-        val (operation, arg) = line.split(' ')
+        val (operation, arg) = line.splitOnce(" ")
         operation to arg.toInt()
     }
 
